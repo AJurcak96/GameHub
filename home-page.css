@@ -40,11 +40,13 @@
 /* Sign up and login buttons - container */
 .button-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Sign up and login buttons */
 .sign-up-button,
-.login-button {
+.login-button,
+.search-button {
   height: 2rem;
   background-color: rgb(233, 140, 73);
   color: white;
@@ -57,9 +59,21 @@
   transition: all 0.2s ease;
 }
 
+/* Search input box, styling  */
+.input-box {
+  height: 2rem;
+  border-radius: 5%;
+  border: 1px solid grey;
+  /* margin-right: 1rem; */
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+  align-self: flex-end;
+}
+
 /* Sign up and login buttons - hover with mouse cursor */
 .sign-up-button:hover,
-.login-button:hover {
+.login-button:hover,
+.search-button:hover {
   height: 2.2rem;
   background-color: rgb(236, 157, 100);
 }
@@ -129,17 +143,8 @@
 }
 
 /* Responsievness */
-/* For screens 580px and smaller */
-@media screen and (max-width: 580px) {
-  /* Container Body */
-  .containers-body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-
-/* For screens 320px and smaller */
-@media screen and (max-width: 320px) {
+/* For screens 600px and smaller */
+@media screen and (max-width: 600px) {
   /* header container */
   .container-header {
     flex-direction: column;
@@ -155,5 +160,10 @@
   /* Sign up and login buttons - container */
   .button-container {
     justify-content: center;
+  }
+  /* Container Body */
+  .containers-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
