@@ -100,7 +100,6 @@ body {
   padding: 1rem;
   background-color: var(--container-color);
   place-self: center;
-  border: 1px solid gray;
 }
 
 /* Topics container - links */
