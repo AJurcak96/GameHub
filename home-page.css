@@ -1,11 +1,16 @@
-/* Body styling */
-body {
-  margin: auto;
-}
-
 /* Root for background color */
 :root {
   --container-color: antiquewhite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
 }
 
 /* header container */
@@ -116,15 +121,16 @@ body {
 }
 
 .footer-homepage-link {
-    text-align: center;
-    font-size: 3rem;
-    margin-top: auto;
-    margin-bottom: auto;
+  text-align: center;
+  font-size: 3rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* Responsievness */
 /* For screens 580px and smaller */
 @media screen and (max-width: 580px) {
+
   /* Container Body */
   .containers-body {
     grid-template-columns: 1fr;
@@ -134,16 +140,19 @@ body {
 
 /* For screens 320px and smaller */
 @media screen and (max-width: 320px) {
+
   /* header container */
   .container-header {
     flex-direction: column;
   }
+
   /* title */
   .title {
     text-align: center;
     margin-bottom: 3%;
     padding-left: 0%;
   }
+
   /* Sign up and login buttons - container */
   .button-container {
     justify-content: center;
