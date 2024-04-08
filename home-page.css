@@ -3,6 +3,7 @@
   --container-color: antiquewhite;
 }
 
+/* reset all */
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +40,6 @@
 /* Sign up and login buttons - container */
 .button-container {
   display: flex;
-  margin-right: 1em;
 }
 
 /* Sign up and login buttons */
@@ -52,6 +52,7 @@
   border-radius: 10%;
   margin-right: 0.5em;
   margin-bottom: 0.5em;
+  padding: 5px;
   align-self: flex-end;
   transition: all 0.2s ease;
 }
@@ -130,7 +131,6 @@
 /* Responsievness */
 /* For screens 580px and smaller */
 @media screen and (max-width: 580px) {
-
   /* Container Body */
   .containers-body {
     grid-template-columns: 1fr;
@@ -140,7 +140,6 @@
 
 /* For screens 320px and smaller */
 @media screen and (max-width: 320px) {
-
   /* header container */
   .container-header {
     flex-direction: column;
