@@ -109,7 +109,7 @@ body {
 
 /* Footer section */
 .container-footer {
-  margin-top: 30rem;
+  margin-top: 20rem;
   border-top: 3px groove grey;
   background-color: var(--container-color);
   text-align: center;
