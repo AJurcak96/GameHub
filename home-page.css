@@ -1,9 +1,9 @@
 /* Root for background color */
 :root {
   --container-color: antiquewhite;
-  --font-color: #0C0C0C;
-  --border-between-links: #5C5470;
-  --hover-text-color: #1D24CA;
+  --font-color: #0c0c0c;
+  --border-between-links: #5c5470;
+  --hover-text-color: #1d24ca;
 }
 
 /* reset all */
@@ -43,11 +43,13 @@
 /* Sign up and login buttons - container */
 .button-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 /* Sign up and login buttons */
 .sign-up-button,
-.login-button {
+.login-button,
+.search-button {
   height: 2rem;
   background-color: rgb(233, 140, 73);
   color: white;
@@ -62,9 +64,17 @@
 
 /* Sign up and login buttons - hover with mouse cursor */
 .sign-up-button:hover,
-.login-button:hover {
+.login-button:hover,
+.search-button:hover {
   height: 2.2rem;
   background-color: rgb(236, 157, 100);
+}
+
+.input-field {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  align-self: flex-end;
 }
 
 /* Welcome container */
@@ -99,7 +109,7 @@
   padding: 0 1.5rem;
   background-color: var(--container-color);
   place-self: center;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -129,7 +139,7 @@
   padding: 0 1rem;
   background-color: var(--container-color);
   place-self: center;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -166,17 +176,8 @@
 }
 
 /* Responsievness */
-/* For screens 580px and smaller */
-@media screen and (max-width: 580px) {
-  /* Container Body */
-  .containers-body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-
-/* For screens 320px and smaller */
-@media screen and (max-width: 320px) {
+/* For screens 600px and smaller */
+@media screen and (max-width: 600px) {
   /* header container */
   .container-header {
     flex-direction: column;
@@ -192,5 +193,10 @@
   /* Sign up and login buttons - container */
   .button-container {
     justify-content: center;
+  }
+  /* Container Body */
+  .containers-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
