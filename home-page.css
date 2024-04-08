@@ -1,6 +1,9 @@
 /* Root for background color */
 :root {
   --container-color: antiquewhite;
+  --font-color: #0C0C0C;
+  --border-between-links: #5C5470;
+  --hover-text-color: #1D24CA;
 }
 
 * {
@@ -33,7 +36,7 @@
   font-size: 3rem;
   padding-left: 10%;
   margin: 0;
-  color: black;
+  color: var(--font-color);
 }
 
 /* Sign up and login buttons - container */
@@ -75,6 +78,7 @@
   font-size: 2rem;
   font-weight: 400;
   font-family: sans-serif;
+  color: var(--font-color);
 }
 
 /* Container Body */
@@ -91,9 +95,28 @@
   flex-direction: column;
   width: 90%;
   margin: 2rem;
-  padding: 1rem;
+  padding: 0 1.5rem;
   background-color: var(--container-color);
   place-self: center;
+  border-radius: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* Main links */
+.main-links {
+  padding: 2rem 0;
+  color: var(--font-color);
+  border-bottom: 1px solid var(--border-between-links);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.main-links:last-of-type {
+  border-bottom: 0;
+}
+
+.main-links:hover {
+  color: var(--hover-text-color);
 }
 
 /* Topics container */
@@ -102,14 +125,28 @@
   flex-direction: column;
   width: 60%;
   margin: 2rem;
-  padding: 1rem;
+  padding: 0 1rem;
   background-color: var(--container-color);
   place-self: center;
+  border-radius: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 /* Topics container - links */
-.links {
-  margin-bottom: 1em;
+.topics-links {
+  padding: 2rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--font-color);
+  border-bottom: 1px solid var(--border-between-links);
+}
+
+.topics-links:last-of-type {
+  border-bottom: 0;
+}
+
+.topics-links:hover {
+  color: var(--hover-text-color);
 }
 
 /* Footer section */
