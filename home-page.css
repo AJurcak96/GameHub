@@ -1,0 +1,152 @@
+/* Body styling */
+body {
+  margin: auto;
+}
+
+/* Root for background color */
+:root {
+  --container-color: antiquewhite;
+}
+
+/* header container */
+.container-header {
+  width: 100%;
+  padding-top: 10%;
+  border-bottom: 5px groove grey;
+  background-color: var(--container-color);
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+/* title */
+.title {
+  text-decoration: none;
+  text-align: left;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 3rem;
+  padding-left: 10%;
+  margin: 0;
+  color: black;
+}
+
+/* Sign up and login buttons - container */
+.button-container {
+  display: flex;
+  margin-right: 1em;
+}
+
+/* Sign up and login buttons */
+.sign-up-button,
+.login-button {
+  height: 2rem;
+  background-color: rgb(233, 140, 73);
+  color: white;
+  border: 1px ridge orange;
+  border-radius: 10%;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  align-self: flex-end;
+  transition: all 0.2s ease;
+}
+
+/* Sign up and login buttons - hover with mouse cursor */
+.sign-up-button:hover,
+.login-button:hover {
+  height: 2.2rem;
+  background-color: rgb(236, 157, 100);
+}
+
+/* Welcome container */
+.container-welcome {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Welcome container - text */
+.text {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+/* Container Body */
+.containers-body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+}
+
+/* Disscusions container */
+.container-disscusions {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 2rem;
+  padding: 1rem;
+  background-color: var(--container-color);
+  place-self: center;
+}
+
+/* Topics container */
+.container-topics {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 2rem;
+  padding: 1rem;
+  background-color: var(--container-color);
+  place-self: center;
+  border: 1px solid gray;
+}
+
+/* Topics container - links */
+.links {
+  margin-bottom: 1em;
+}
+
+/* Footer section */
+.container-footer {
+  margin-top: 30rem;
+  border-top: 3px groove grey;
+  background-color: var(--container-color);
+  text-align: center;
+}
+
+.footer-homepage-link {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Responsievness */
+/* For screens 580px and smaller */
+@media screen and (max-width: 580px) {
+  /* Container Body */
+  .containers-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* For screens 320px and smaller */
+@media screen and (max-width: 320px) {
+  /* header container */
+  .container-header {
+    flex-direction: column;
+  }
+  /* title */
+  .title {
+    text-align: center;
+    margin-bottom: 3%;
+    padding-left: 0%;
+  }
+  /* Sign up and login buttons - container */
+  .button-container {
+    justify-content: center;
+  }
+}
