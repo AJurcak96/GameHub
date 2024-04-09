@@ -35,8 +35,38 @@
   font-weight: bold;
   font-style: normal;
   font-size: 3rem;
-  padding-left: 5%;
   color: var(--font-color);
+  text-decoration: none;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+/* Hub - jump animation */
+.jump {
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.title:hover .jump {
+  animation: jumpAnimation 0.5s ease infinite;
+}
+
+@keyframes jumpAnimation {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Sign up and login buttons - container */
@@ -106,6 +136,59 @@
   font-weight: 400;
   font-family: sans-serif;
   color: var(--font-color);
+}
+
+/* Top topic - text */
+.top-topic-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  color: var(--font-color);
+}
+
+/* Top topics, container */
+.container-top-topics {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 100%;
+}
+
+/* Top topics, card */
+.card {
+  height: 100%;
+  width: auto;
+  margin-bottom: 0%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.topic-image {
+  height: 300px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* Top topics, buttons */
+.btn {
+  background-color: var(--container-color);
+  color: var(--font-color);
+  border: 2px ridge var(--font-color);
+  transition: all 0.2s ease;
+}
+
+/* Top topics, buttons */
+.btn:hover {
+  background-color: var(--container-color);
+  color: var(--font-color);
+  border: 1px ridge var(--font-color);
 }
 
 /* Container Body */
@@ -192,8 +275,23 @@
 }
 
 /* Responsievness */
-/* For screens 620px and smaller */
-@media screen and (max-width: 620px) {
+/* For screens 980px and smaller */
+@media screen and (max-width: 980px) {
+  .topic-image {
+    height: 200px;
+    width: 200px;
+    transition: all 0.2s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  /* Top topics, container */
+  .container-top-topics {
+    gap: 5%;
+  }
+}
+
+/* For screens 650px and smaller */
+@media screen and (max-width: 650px) {
   /* header container */
   .container-header {
     flex-direction: column;
@@ -209,6 +307,13 @@
   /* Sign up and login buttons - container */
   .button-container {
     justify-content: center;
+  }
+  /* Top topics, container */
+  .container-top-topics {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    gap: 5%;
   }
   /* Container Body */
   .containers-body {
