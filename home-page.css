@@ -53,7 +53,6 @@
 }
 
 @keyframes jumpAnimation {
-
   0%,
   10%,
   20%,
@@ -102,9 +101,9 @@
 }
 
 /* Sign up and login buttons - hover with mouse cursor */
-.sign-up-button:hover,
-.login-button:hover,
-.search-button:hover {
+.sign-up-button:active,
+.login-button:active,
+.search-button:active {
   border-bottom-width: 0;
   transform: translateY(2px);
 }
@@ -222,7 +221,6 @@
   border-bottom: 1px solid var(--border-between-links);
 }
 
-
 .link-container:last-of-type {
   border-bottom: 0;
 }
@@ -233,8 +231,8 @@
   color: var(--font-color);
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 0 .5rem;
-  transition: transform .2s;
+  padding: 0 0.5rem;
+  transition: transform 0.2s;
 }
 
 .main-links:hover {
@@ -262,7 +260,6 @@
   border-bottom: 1px solid var(--border-between-links);
 }
 
-
 .topic-links-container:last-of-type {
   border-bottom: 0;
 }
@@ -270,11 +267,11 @@
 /* Topics container - links */
 .topics-links {
   text-decoration: none;
-  padding: 0 .3rem;
+  padding: 0 0.3rem;
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--font-color);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .topics-links:hover {
@@ -314,9 +311,8 @@
   }
 }
 
-/* For screens 650px and smaller */
-@media screen and (max-width: 650px) {
-
+/* For screens 660px and smaller */
+@media screen and (max-width: 660px) {
   /* header container */
   .container-header {
     flex-direction: column;
