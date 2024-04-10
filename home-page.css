@@ -100,29 +100,22 @@
   margin-right: 5px;
 }
 
-/* Sign up and login buttons - hover with mouse cursor */
-.sign-up-button:active,
-.login-button:active,
-.search-button:active {
-  border-bottom-width: 0;
-  transform: translateY(2px);
-}
-
-/* Search container, search button and input field */
-.search-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Input field - search */
-.input-field {
+/* Search input box, styling  */
+.input-box {
   height: 2rem;
+  border-radius: 5%;
+  border: 1px solid grey;
+  /* margin-right: 1rem; */
   margin-bottom: 0.5rem;
-  margin-right: 1rem;
-  padding-left: 0.5rem;
+  padding: 0 0.5rem;
   align-self: flex-end;
-  border-radius: 10px;
-  box-shadow: 0px 0px 3px 1px #000000 inset;
+}
+
+/* Sign up and login buttons - hover with mouse cursor */
+.sign-up-button:hover,
+.login-button:hover {
+  height: 2.2rem;
+  background-color: rgb(236, 157, 100);
 }
 
 /* Welcome container */
@@ -295,24 +288,17 @@
 }
 
 /* Responsievness */
-/* For screens 980px and smaller */
-@media screen and (max-width: 980px) {
-  .topic-image {
-    height: 200px;
-    width: 200px;
-    transition: all 0.2s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-      rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  }
-
-  /* Top topics, container */
-  .container-top-topics {
-    gap: 5%;
+/* For screens 580px and smaller */
+@media screen and (max-width: 580px) {
+  /* Container Body */
+  .containers-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 }
 
-/* For screens 660px and smaller */
-@media screen and (max-width: 660px) {
+/* For screens 320px and smaller */
+@media screen and (max-width: 320px) {
   /* header container */
   .container-header {
     flex-direction: column;
@@ -328,31 +314,5 @@
   /* Sign up and login buttons - container */
   .button-container {
     justify-content: center;
-  }
-
-  /* Top topics, container */
-  .container-top-topics {
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr;
-    height: 100%;
-    gap: 5%;
-  }
-
-  /* Container Body */
-  .containers-body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  /* Search container, search button and input field */
-  .search-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Input field - search */
-  .input-field {
-    margin-right: 0%;
   }
 }
