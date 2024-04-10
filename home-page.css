@@ -71,6 +71,69 @@
   }
 }
 
+/* Base styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  color: var(--font-color);
+  display: none;
+}
+
+.header-nav-link {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+/* Hamburger menu icon */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.menu-toggle.active {
+  justify-content: right;
+}
+
+/* Content of menu-toggle is displayed */
+.menu-toggle.active + .header-nav-link {
+  display: block;
+}
+
+/* Sign up and login buttons when menu-toggle is active */
+.menu-toggle.active + .header-nav-link .sign-up-button,
+.menu-toggle.active + .header-nav-link .login-button,
+.menu-toggle.active + .header-nav-link .search-button {
+  font-size: 14px;
+  width: 4rem;
+  height: 2rem;
+  margin-right: 0%;
+}
+
 /* Sign up and login buttons - container */
 .button-container {
   display: flex;
@@ -352,9 +415,15 @@
     padding-left: 0%;
   }
 
+  /* Base styles */
+  header {
+    display: block;
+  }
+
   /* Sign up and login buttons - container */
   .button-container {
     justify-content: center;
+    display: none;
   }
 
   /* Top topics, container */
@@ -380,5 +449,25 @@
   /* Input field - search */
   .input-field {
     margin-right: 0%;
+  }
+}
+/* For screens 320px and smaller */
+@media screen and (max-width: 320px) {
+  .header-nav-link {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    display: flex;
+    justify-content: right;
+  }
+
+  /* Show nav links when menu is toggled */
+  header.active nav {
+    display: block;
   }
 }
