@@ -100,22 +100,29 @@
   margin-right: 5px;
 }
 
-/* Search input box, styling  */
-.input-box {
-  height: 2rem;
-  border-radius: 5%;
-  border: 1px solid grey;
-  /* margin-right: 1rem; */
-  margin-bottom: 0.5rem;
-  padding: 0 0.5rem;
-  align-self: flex-end;
+/* Sign up and login buttons - hover with mouse cursor */
+.sign-up-button:active,
+.login-button:active,
+.search-button:active {
+  border-bottom-width: 0;
+  transform: translateY(2px);
 }
 
-/* Sign up and login buttons - hover with mouse cursor */
-.sign-up-button:hover,
-.login-button:hover {
-  height: 2.2rem;
-  background-color: rgb(236, 157, 100);
+/* Search container, search button and input field */
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Input field - search */
+.input-field {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  padding-left: 0.5rem;
+  align-self: flex-end;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 1px #000000 inset;
 }
 
 /* Welcome container */
@@ -140,21 +147,80 @@
   font-weight: 400;
   font-family: sans-serif;
   color: var(--font-color);
+  margin-bottom: 3rem;
 }
 
 /* Top topics, container */
 .container-top-topics {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-items: center;
-  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin-bottom: 5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  height: 100%;
+  height: 25rem;
+  gap: 2rem;
+
+  > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #eb8b54;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("https://assets-prd.ignimgs.com/2022/04/19/wow-dragonflight-button-1-1650398895381.jpg?width=300&crop=1%3A1%2Csmart&auto=webp")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp")
+        no-repeat 50% / cover;
+    }
+
+    /* Images inside */
+    .content {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: #eb8b54;
+      background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.6755077030812324) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 250px;
+      box-shadow: 1px 3px 15px #eb8b54;
+      transform: translatey(-30px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
 }
 
 /* Top topics, card */
@@ -189,9 +255,6 @@
 /* Container Body */
 .containers-body {
   width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto;
 }
 
 /* Discussions container */
@@ -199,7 +262,7 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 2rem;
+  margin: auto;
   padding: 0 1.5rem;
   background-color: var(--container-color);
   place-self: center;
@@ -231,19 +294,6 @@
 .main-links:hover {
   color: var(--hover-text-color);
   transform: scale(1.1);
-}
-
-/* Topics container */
-.container-topics {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin: 2rem;
-  padding: 0 1rem;
-  background-color: var(--container-color);
-  place-self: center;
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 /* Topic Links Container */
@@ -288,17 +338,8 @@
 }
 
 /* Responsievness */
-/* For screens 580px and smaller */
-@media screen and (max-width: 580px) {
-  /* Container Body */
-  .containers-body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-
-/* For screens 320px and smaller */
-@media screen and (max-width: 320px) {
+/* For screens 660px and smaller */
+@media screen and (max-width: 660px) {
   /* header container */
   .container-header {
     flex-direction: column;
@@ -314,5 +355,30 @@
   /* Sign up and login buttons - container */
   .button-container {
     justify-content: center;
+  }
+
+  /* Top topics, container */
+  .container-top-topics {
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  /* Container Body */
+  .containers-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  /* Search container, search button and input field */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Input field - search */
+  .input-field {
+    margin-right: 0%;
   }
 }
