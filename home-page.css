@@ -21,7 +21,7 @@
 .container-header {
   width: 100%;
   padding-top: 2rem;
-  border-bottom: 5px groove grey;
+  border-bottom: 1px groove grey;
   background-color: var(--container-color);
   display: inline-flex;
   justify-content: space-between;
@@ -322,19 +322,89 @@
   transform: scale(1.1);
 }
 
-/* Footer section */
-.container-footer {
-  margin-top: 20rem;
-  border-top: 3px groove grey;
+/*FOOTER*/
+footer {
   background-color: var(--container-color);
-  text-align: center;
+  color: var(--font-color);
+  margin-top: 100px;
 }
 
-.footer-homepage-link {
+/* Styles for links inside footer */
+footer a {
+  color: var(--font-color);
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+/* Styles for hover effect on footer links */
+footer a:hover {
+  color: #fa944b;
+  text-decoration: none;
+}
+
+/* Styles for copyright section */
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #ffffff;
+}
+
+/* Styles for middle section of the footer */
+.footer-middle {
+  padding-top: 2em;
+  color: var(--font-color);
+}
+
+/*SOCİAL İCONS*/
+
+/* Styles for social icons section */
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+/* Styles for individual social icon */
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+/* footer social icons */
+
+/* Styles for hover effect on Facebook and Linkedin icons */
+.social-network a.icoFacebook:hover {
+  background-color: #fa944b;
+}
+/* Styles for icon color change on hover */
+.social-network a.icoLinkedin:hover {
+  background-color: #fa944b;
+}
+
+/* Styles for general hover effect on social icons */
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+/* Styles for icon alignment inside circular social icons */
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
   text-align: center;
-  font-size: 3rem;
-  margin-top: auto;
-  margin-bottom: auto;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+/* social circular background */
+.social-network a {
+  background-color: #f9f9f9;
 }
 
 /* Responsievness */
