@@ -315,6 +315,16 @@ nav ul li a {
   border: 1px ridge var(--font-color);
 }
 
+/* Container - GENERAL DISCUSSIONS */
+.container-general-discussions {
+  width: 90%;
+  margin: auto;
+  padding: 0 1.5rem;
+  place-self: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 /* Container Body */
 .containers-body {
   width: 100%;
