@@ -91,8 +91,8 @@ header {
 .navbar-ul {
   list-style-type: none;
   margin: 0;
-  margin-top: 1.5rem;
   padding: 0;
+  margin-top: 1.5rem;
 }
 
 nav ul li {
@@ -113,7 +113,14 @@ nav ul li a {
 .menu-toggle {
   display: none; /* Hidden by default */
   cursor: pointer;
-  font-size: 24px;
+  font-size: 1.5rem;
+  color: black;
+  transition: all 0.1s ease;
+}
+
+/* Hamburger menu icon - hover */
+.menu-toggle:hover {
+  color: grey;
 }
 
 .menu-toggle.active {
