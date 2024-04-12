@@ -37,8 +37,9 @@
   font-size: 3rem;
   color: var(--font-color);
   text-decoration: none;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin-right: 0%;
+  margin-left: 0%;
+  padding: 0 0 0 1rem;
 }
 
 /* Hub - jump animation */
@@ -74,9 +75,8 @@
 /* Base styles */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
   background-color: transparent;
   color: var(--font-color);
   display: none;
@@ -88,19 +88,20 @@ header {
   flex-wrap: wrap;
 }
 
-nav ul {
+.navbar-ul {
   list-style-type: none;
   margin: 0;
+  margin-top: 1.5rem;
   padding: 0;
-  display: flex;
 }
 
 nav ul li {
-  margin-right: 20px;
+  margin-right: 0%;
+  display: inline-flex;
 }
 
 nav ul li:last-child {
-  margin-right: 0;
+  margin-right: 0%;
 }
 
 nav ul li a {
@@ -156,11 +157,11 @@ nav ul li a {
   height: 2rem;
   font-weight: bold;
   border-bottom: 5px solid #b46436;
-  transition: 0.3s;
+  transition: 0.2s;
   background-color: #eb8b54;
   align-self: flex-end;
-  margin-bottom: 0.5rem;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 /* Sign up and login buttons - hover with mouse cursor */
@@ -210,6 +211,7 @@ nav ul li a {
   font-weight: 400;
   font-family: sans-serif;
   color: var(--font-color);
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -284,20 +286,6 @@ nav ul li a {
       visibility: visible;
     }
   }
-}
-
-/* Top topics, card */
-.card {
-  height: 100%;
-  width: auto;
-  margin-bottom: 0%;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-
-.topic-image {
-  height: 300px;
-  width: 300px;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 /* Top topics, buttons */
@@ -390,6 +378,7 @@ nav ul li a {
   transition: transform 0.2s;
 }
 
+/* Topics container when hovered */
 .topics-links:hover {
   color: var(--hover-text-color);
   transform: scale(1.1);
@@ -497,12 +486,6 @@ ul.social-network li {
 
   /* Base styles */
   header {
-    display: block;
-  }
-
-  /* Sign up and login buttons - container */
-  .button-container {
-    justify-content: center;
     display: none;
   }
 
@@ -511,6 +494,13 @@ ul.social-network li {
     flex-direction: column;
     margin-top: 7rem;
     margin-bottom: 10rem;
+  }
+
+  /* Images inside */
+  #content {
+    height: 100%;
+    width: 80%;
+    align-self: center;
   }
 
   /* Container Body */
@@ -530,9 +520,32 @@ ul.social-network li {
   .input-field {
     margin-right: 0%;
   }
+  /* div for names and follow links in footer section */
+  .row {
+    text-align: center;
+  }
 }
-/* For screens 320px and smaller */
-@media screen and (max-width: 320px) {
+
+/* for screens 501px and bigger */
+@media screen and (min-width: 501px) {
+  /* Base styles */
+  header {
+    display: block;
+  }
+}
+
+/* For screens 500px and smaller */
+@media screen and (max-width: 500px) {
+  /* Base styles */
+  header {
+    display: block;
+    padding: 0 0.5rem;
+  }
+  /* Sign up and login buttons - container */
+  .button-container {
+    justify-content: center;
+    display: none;
+  }
   .header-nav-link {
     display: none;
   }
@@ -540,14 +553,21 @@ ul.social-network li {
     display: none;
   }
 
+  nav ul li {
+    margin-right: 0%;
+    display: flex;
+  }
+
   .menu-toggle {
-    display: block;
     display: flex;
     justify-content: right;
   }
 
   /* Show nav links when menu is toggled */
   header.active nav {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: left;
   }
 }
