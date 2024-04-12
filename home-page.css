@@ -114,6 +114,13 @@ nav ul li a {
   display: none; /* Hidden by default */
   cursor: pointer;
   font-size: 24px;
+  color: var(--font-color);
+  transition: all 0.1s ease-in;
+}
+
+/* Hamburger menu icon - hover */
+.menu-toggle:hover {
+  color: grey;
 }
 
 .menu-toggle.active {
@@ -193,6 +200,7 @@ nav ul li a {
 .container-welcome {
   margin-top: 4rem;
   margin-bottom: 4rem;
+  padding: 0 1rem;
 }
 
 /* Welcome container - text */
