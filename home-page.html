@@ -37,7 +37,7 @@
 
         <!-- Navigation Menu -->
         <nav class="header-nav-link">
-          <ul>
+          <ul class="navbar-ul">
             <li>
               <a href="#"><button class="sign-up-button">Sign up</button></a>
             </li>
@@ -47,50 +47,46 @@
             <li>
               <a href="#"><button class="search-button">Search</button></a>
             </li>
+            <li>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Search a for game..."
+              />
+            </li>
           </ul>
         </nav>
       </header>
-      <!-- Sign up and login buttons -->
-      <div class="button-container">
-        <button class="sign-up-button">Sign up</button>
-        <button class="login-button">Login</button>
-        <!-- Search container -->
-        <div class="search-container">
-          <button class="search-button">Search</button>
-          <input
-            class="input-field"
-            type="text"
-            placeholder="Search for game..."
-          />
-        </div>
-      </div>
     </div>
 
-    <!-- Container Welcome -->
     <div class="container-welcome">
-      <h2 class="text">Welcome to Game Hub!</h2>
-      <h3 class="text">Sign up or Login and start a disscusion</h3>
+      <h2 class="text" id="welcomeText">Welcome to Game Hub!</h2>
+      <h3 class="text" id="subText">Sign up or Login and start a discussion</h3>
     </div>
+
+    <hr />
 
     <!-- top 3 topics -->
     <h4 class="top-topic-text">Top 3 selected by communtity</h4>
     <div class="container-top-topics">
-      <div>
+      <div id="content">
         <div class="content">
           <h2>Civilization 6</h2>
         </div>
       </div>
-      <div>
+      <div id="content">
         <div class="content">
           <h2>World of Warcraft: Dragonflight</h2>
         </div>
       </div>
-      <div>
+      <div id="content">
         <div class="content">
           <h2>Hitman: Freelancer</h2>
         </div>
       </div>
     </div>
+
+    <hr />
 
     <div class="container-general-discussions">
       <p class="general-discussions-text">General Discussions</p>
