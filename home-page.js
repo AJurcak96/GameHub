@@ -55,6 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
   showTextLetterByLetter(
     "subText",
     "Sign up or Login and start a discussion",
-    100
+    40
   );
 });
