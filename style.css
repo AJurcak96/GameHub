@@ -4,6 +4,8 @@
   --font-color: #0c0c0c;
   --border-between-links: #5c5470;
   --hover-text-color: #1d24ca;
+  --btn-color: #eb8b54;
+  --btn-border-color: #b46436;
 }
 
 /* reset all */
@@ -56,6 +58,7 @@
 }
 
 @keyframes jumpAnimation {
+
   0%,
   10%,
   20%,
@@ -131,14 +134,14 @@ nav ul li a {
 }
 
 /* Content of menu-toggle is displayed */
-.menu-toggle.active + .header-nav-link {
+.menu-toggle.active+.header-nav-link {
   display: block;
 }
 
 /* Sign up and login buttons when menu-toggle is active */
-.menu-toggle.active + .header-nav-link .sign-up-button,
-.menu-toggle.active + .header-nav-link .login-button,
-.menu-toggle.active + .header-nav-link .search-button {
+.menu-toggle.active+.header-nav-link .sign-up-button,
+.menu-toggle.active+.header-nav-link .login-button,
+.menu-toggle.active+.header-nav-link .search-button {
   font-size: 14px;
   width: 4rem;
   height: 2rem;
@@ -166,9 +169,9 @@ nav ul li a {
   width: 5rem;
   height: 2rem;
   font-weight: bold;
-  border-bottom: 5px solid #b46436;
+  border-bottom: 5px solid var(--btn-border-color);
   transition: 0.2s;
-  background-color: #eb8b54;
+  background-color: var(--btn-color);
   align-self: flex-end;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -236,7 +239,7 @@ nav ul li a {
   height: 25rem;
   gap: 2rem;
 
-  > div {
+  >div {
     flex: 0 0 120px;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
@@ -246,18 +249,15 @@ nav ul li a {
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg")
-        no-repeat 50% / cover;
+      background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg") no-repeat 50% / cover;
     }
 
     &:nth-of-type(2) {
-      background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1")
-        no-repeat 50% / cover;
+      background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1") no-repeat 50% / cover;
     }
 
     &:nth-of-type(3) {
-      background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp")
-        no-repeat 50% / cover;
+      background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp") no-repeat 50% / cover;
     }
 
     /* Images inside */
@@ -271,12 +271,10 @@ nav ul li a {
       flex-direction: column;
       height: 100%;
       justify-content: flex-end;
-      background: #eb8b54;
-      background: linear-gradient(
-        0deg,
-        rgba(2, 2, 46, 0.6755077030812324) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: var(--btn-color);
+      background: linear-gradient(0deg,
+          rgba(2, 2, 46, 0.6755077030812324) 0%,
+          rgba(255, 255, 255, 0) 100%);
       transform: translatey(100%);
       transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
       visibility: hidden;
@@ -290,7 +288,7 @@ nav ul li a {
 
     &:hover {
       flex: 0 0 250px;
-      box-shadow: 1px 3px 15px #eb8b54;
+      box-shadow: 1px 3px 15px var(--btn-color);
       transform: translatey(-30px);
     }
 
@@ -329,15 +327,46 @@ nav ul li a {
   font-weight: bold;
 }
 
+/* Topic Header and Button Container WoW */
+
+.topic-name-and-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 6.25rem 9.2rem 2rem 9.2rem;
+}
+
+.topic-header {
+  font-size: 2.3rem;
+}
+
+.topic-btn {
+  display: flex;
+  align-items: center;
+}
+
+.new-topic-btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: var(--btn-color);
+  padding: .5rem 1.8rem;
+  border-radius: .3rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.new-topic-btn:hover {
+  background-color: var(--btn-border-color);
+  color: #ffffff;
+}
+
+.new-topic-btn:active {
+  background-color: var(--btn-color);
+  color: #ffffff;
+}
+
 /* Container Body */
 .containers-body {
   width: 100%;
-}
-
-/* Container Body WOW Page */
-.containers-body-wow {
-  width: 100%;
-  padding-top: 100px;
 }
 
 /* Discussions container */
@@ -497,6 +526,7 @@ ul.social-network li {
 
 /* For screens 660px and smaller */
 @media screen and (max-width: 660px) {
+
   /* header container */
   .container-header {
     flex-direction: column;
@@ -554,6 +584,7 @@ ul.social-network li {
 
 /* for screens 501px and bigger */
 @media screen and (min-width: 501px) {
+
   /* Base styles */
   header {
     display: block;
@@ -562,6 +593,7 @@ ul.social-network li {
 
 /* For screens 500px and smaller */
 @media screen and (max-width: 500px) {
+
   /* Base styles */
   header {
     display: block;
