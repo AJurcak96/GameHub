@@ -58,8 +58,6 @@
 }
 
 @keyframes jumpAnimation {
-
-
   0%,
   10%,
   20%,
@@ -135,15 +133,14 @@ nav ul li a {
 }
 
 /* Content of menu-toggle is displayed */
-.menu-toggle.active+.header-nav-link {
+.menu-toggle.active + .header-nav-link {
   display: block;
 }
 
-
 /* Sign up and login buttons when menu-toggle is active */
-.menu-toggle.active+.header-nav-link .sign-up-button,
-.menu-toggle.active+.header-nav-link .login-button,
-.menu-toggle.active+.header-nav-link .search-button {
+.menu-toggle.active + .header-nav-link .sign-up-button,
+.menu-toggle.active + .header-nav-link .login-button,
+.menu-toggle.active + .header-nav-link .search-button {
   font-size: 14px;
   width: 4rem;
   height: 2rem;
@@ -232,6 +229,7 @@ nav ul li a {
   color: var(--font-color);
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 /* Top topics, container */
@@ -243,90 +241,67 @@ nav ul li a {
   height: 25rem;
   gap: 2rem;
 
-  >div {
-    >div {
-      flex: 0 0 120px;
-      border-radius: 0.5rem;
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
-      box-shadow: 1px 5px 15px #eb8b54;
-      position: relative;
-      overflow: hidden;
+  > div {
+    flex: 0 0 8rem;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px orange;
+    position: relative;
+    overflow: hidden;
 
-      &:nth-of-type(1) {
-        background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg") no-repeat 50% / cover;
-        background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg") no-repeat 50% / cover;
-      }
+    &:nth-of-type(1) {
+      background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp")
+        no-repeat 50% / cover;
+    }
 
-      &:nth-of-type(2) {
-        background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1") no-repeat 50% / cover;
-        background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1") no-repeat 50% / cover;
-      }
+    .content {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(2, 2, 46);
+      background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.6755077030812324) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
 
-      &:nth-of-type(3) {
-        background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp") no-repeat 50% / cover;
-        background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp") no-repeat 50% / cover;
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
       }
     }
+
+    &:hover {
+      flex: 0 0 250px;
+      box-shadow: 1px 3px 15px #7645d8;
+      transform: translatey(-30px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
   }
-}
-
-/* Images inside */
-.content {
-  font-size: 1.5rem;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  opacity: 0;
-  flex-direction: column;
-  height: 100%;
-  justify-content: flex-end;
-  background: var(--btn-color);
-  background: linear-gradient(0deg,
-      rgba(2, 2, 46, 0.6755077030812324) 0%,
-      rgba(255, 255, 255, 0) 100%);
-  background: var(--btn-color);
-  background: linear-gradient(0deg,
-      rgba(2, 2, 46, 0.6755077030812324) 0%,
-      rgba(255, 255, 255, 0) 100%);
-  transform: translateY(100%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
-  visibility: hidden;
-
-  span {
-    display: block;
-    margin-top: 5px;
-    font-size: 1.2rem;
-  }
-}
-
-&:hover {
-  flex: 0 0 250px;
-  box-shadow: 1px 3px 15px var(--btn-color);
-  box-shadow: 1px 3px 15px var(--btn-color);
-  transform: translateY(-30px);
-}
-
-&:hover .content {
-  opacity: 1;
-  transform: translateY(0%);
-  visibility: visible;
-}
-
-/* Top topics, buttons */
-.btn {
-  background-color: var(--container-color);
-  color: var(--font-color);
-  border: 2px ridge var(--font-color);
-  transition: all 0.2s ease;
-}
-
-/* Top topics, buttons */
-.btn:hover {
-  background-color: var(--container-color);
-  color: var(--font-color);
-  border: 1px ridge var(--font-color);
 }
 
 /* ********** MAIN SECTION STYLE ********** */
@@ -362,8 +337,8 @@ nav ul li a {
   text-decoration: none;
   color: #ffffff;
   background-color: var(--btn-color);
-  padding: .5rem 1.8rem;
-  border-radius: .3rem;
+  padding: 0.5rem 1.8rem;
+  border-radius: 0.3rem;
   font-size: 1.05rem;
   font-weight: 500;
 }
@@ -399,8 +374,8 @@ nav ul li a {
   text-decoration: none;
   color: #ffffff;
   background-color: var(--btn-color);
-  padding: .5rem 1.8rem;
-  border-radius: .3rem;
+  padding: 0.5rem 1.8rem;
+  border-radius: 0.3rem;
   font-size: 1.05rem;
   font-weight: 500;
 }
@@ -577,8 +552,6 @@ ul.social-network li {
 
 /* For screens 660px and smaller */
 @media screen and (max-width: 660px) {
-
-
   /* header container */
   .container-header {
     flex-direction: column;
@@ -636,8 +609,6 @@ ul.social-network li {
 
 /* for screens 501px and bigger */
 @media screen and (min-width: 501px) {
-
-
   /* Base styles */
   header {
     display: block;
@@ -646,8 +617,6 @@ ul.social-network li {
 
 /* For screens 500px and smaller */
 @media screen and (max-width: 500px) {
-
-
   /* Base styles */
   header {
     display: block;
