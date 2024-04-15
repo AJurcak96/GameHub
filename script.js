@@ -58,3 +58,25 @@ document.addEventListener("DOMContentLoaded", function () {
     40
   );
 });
+
+// Sign up, Sign in form function
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let nameField = document.getElementById("nameField");
+let titleForm = document.getElementById("titleForm");
+let SignUpButton = document.getElementById("signUpButton");
+let SignInButton = document.getElementById("signInButton");
+
+signinBtn.onclick = function () {
+  nameField.style.display = "none"; // Hide the nameField
+  titleForm.innerHTML = "Sign In";
+  signupBtn.classList.add("disable");
+  signinBtn.classList.remove("disable");
+};
+
+signupBtn.onclick = function () {
+  nameField.style.display = ""; // Restore the default display property
+  titleForm.innerHTML = "Sign Up";
+  signupBtn.classList.remove("disable");
+  signinBtn.classList.add("disable");
+};
