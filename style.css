@@ -6,6 +6,8 @@
   --hover-text-color: #1d24ca;
   --btn-color: #eb8b54;
   --btn-border-color: #b46436;
+  --btn-color: #eb8b54;
+  --btn-border-color: #b46436;
 }
 
 /* reset all */
@@ -58,6 +60,7 @@
 }
 
 @keyframes jumpAnimation {
+
 
   0%,
   10%,
@@ -135,500 +138,556 @@ nav ul li a {
 
 /* Content of menu-toggle is displayed */
 .menu-toggle.active+.header-nav-link {
-  display: block;
-}
+  .menu-toggle.active+.header-nav-link {
+    display: block;
+  }
 
-/* Sign up and login buttons when menu-toggle is active */
-.menu-toggle.active+.header-nav-link .sign-up-button,
-.menu-toggle.active+.header-nav-link .login-button,
-.menu-toggle.active+.header-nav-link .search-button {
-  font-size: 14px;
-  width: 4rem;
-  height: 2rem;
-  margin-right: 0%;
-}
+  /* Sign up and login buttons when menu-toggle is active */
+  .menu-toggle.active+.header-nav-link .sign-up-button,
+  .menu-toggle.active+.header-nav-link .login-button,
+  .menu-toggle.active+.header-nav-link .search-button {
 
-/* Sign up and login buttons - container */
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Sign up and login buttons */
-.sign-up-button,
-.login-button,
-.search-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 18px;
-  border-radius: 20px;
-  width: 5rem;
-  height: 2rem;
-  font-weight: bold;
-  border-bottom: 5px solid var(--btn-border-color);
-  transition: 0.2s;
-  background-color: var(--btn-color);
-  align-self: flex-end;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-/* Sign up and login buttons - hover with mouse cursor */
-.sign-up-button:active,
-.login-button:active,
-.search-button:active {
-  border-bottom-width: 0;
-  transform: translateY(2px);
-}
-
-/* Search container, search button and input field */
-.search-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* Input field - search */
-.input-field {
-  height: 2rem;
-  margin-bottom: 0.5rem;
-  margin-right: 1rem;
-  padding-left: 0.5rem;
-  align-self: flex-end;
-  border-radius: 10px;
-  box-shadow: 0px 0px 3px 1px #000000 inset;
-}
-
-/* ********** HERO STYLE ********** */
-
-/* Welcome container */
-.container-welcome {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-/* Welcome container - text */
-.text {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 400;
-  font-family: sans-serif;
-  color: var(--font-color);
-}
-
-/* Top topic - text */
-.top-topic-text {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-family: sans-serif;
-  color: var(--font-color);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-/* Top topics, container */
-.container-top-topics {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
-  height: 25rem;
-  gap: 2rem;
-
-  >div {
-    flex: 0 0 120px;
-    border-radius: 0.5rem;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-    box-shadow: 1px 5px 15px #eb8b54;
-    position: relative;
-    overflow: hidden;
-
-    &:nth-of-type(1) {
-      background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg") no-repeat 50% / cover;
+    .menu-toggle.active+.header-nav-link .sign-up-button,
+    .menu-toggle.active+.header-nav-link .login-button,
+    .menu-toggle.active+.header-nav-link .search-button {
+      font-size: 14px;
+      width: 4rem;
+      height: 2rem;
+      margin-right: 0%;
     }
 
-    &:nth-of-type(2) {
-      background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1") no-repeat 50% / cover;
+    /* Sign up and login buttons - container */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    &:nth-of-type(3) {
-      background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp") no-repeat 50% / cover;
-    }
-
-    /* Images inside */
-    .content {
-      font-size: 1.5rem;
-      color: #fff;
+    /* Sign up and login buttons */
+    .sign-up-button,
+    .login-button,
+    .search-button {
       display: flex;
       align-items: center;
-      padding: 15px;
-      opacity: 0;
-      flex-direction: column;
-      height: 100%;
-      justify-content: flex-end;
-      background: var(--btn-color);
-      background: linear-gradient(0deg,
-          rgba(2, 2, 46, 0.6755077030812324) 0%,
-          rgba(255, 255, 255, 0) 100%);
-      transform: translatey(100%);
-      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
-      visibility: hidden;
+      justify-content: center;
+      line-height: 1;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 18px;
+      border-radius: 20px;
+      width: 5rem;
+      height: 2rem;
+      font-weight: bold;
+      border-bottom: 5px solid var(--btn-border-color);
+      border-bottom: 5px solid var(--btn-border-color);
+      transition: 0.2s;
+      background-color: var(--btn-color);
+      background-color: var(--btn-color);
+      align-self: flex-end;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
 
-      span {
-        display: block;
-        margin-top: 5px;
-        font-size: 1.2rem;
+    /* Sign up and login buttons - hover with mouse cursor */
+    .sign-up-button:active,
+    .login-button:active,
+    .search-button:active {
+      border-bottom-width: 0;
+      transform: translateY(2px);
+    }
+
+    /* Search container, search button and input field */
+    .search-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Input field - search */
+    .input-field {
+      height: 2rem;
+      margin-bottom: 0.5rem;
+      margin-right: 1rem;
+      padding-left: 0.5rem;
+      align-self: flex-end;
+      border-radius: 10px;
+      box-shadow: 0px 0px 3px 1px #000000 inset;
+    }
+
+    /* ********** HERO STYLE ********** */
+
+    /* Welcome container */
+    .container-welcome {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    /* Welcome container - text */
+    .text {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 400;
+      font-family: sans-serif;
+      color: var(--font-color);
+    }
+
+    /* Top topic - text */
+    .top-topic-text {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-family: sans-serif;
+      color: var(--font-color);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Top topics, container */
+    .container-top-topics {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5rem;
+      height: 25rem;
+      gap: 2rem;
+
+      >div {
+        >div {
+          flex: 0 0 120px;
+          border-radius: 0.5rem;
+          transition: 0.5s ease-in-out;
+          cursor: pointer;
+          box-shadow: 1px 5px 15px #eb8b54;
+          position: relative;
+          overflow: hidden;
+
+          &:nth-of-type(1) {
+            background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg") no-repeat 50% / cover;
+            background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg") no-repeat 50% / cover;
+          }
+
+          &:nth-of-type(2) {
+            background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1") no-repeat 50% / cover;
+            background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1") no-repeat 50% / cover;
+          }
+
+          &:nth-of-type(3) {
+            background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp") no-repeat 50% / cover;
+            background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp") no-repeat 50% / cover;
+          }
+
+          /* Images inside */
+          .content {
+            font-size: 1.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            opacity: 0;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+            background: var(--btn-color);
+            background: linear-gradient(0deg,
+                rgba(2, 2, 46, 0.6755077030812324) 0%,
+                rgba(255, 255, 255, 0) 100%);
+            background: var(--btn-color);
+            background: linear-gradient(0deg,
+                rgba(2, 2, 46, 0.6755077030812324) 0%,
+                rgba(255, 255, 255, 0) 100%);
+            transform: translatey(100%);
+            transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+            visibility: hidden;
+
+            span {
+              display: block;
+              margin-top: 5px;
+              font-size: 1.2rem;
+            }
+          }
+
+          &:hover {
+            flex: 0 0 250px;
+            box-shadow: 1px 3px 15px var(--btn-color);
+            box-shadow: 1px 3px 15px var(--btn-color);
+            transform: translatey(-30px);
+          }
+
+          &:hover .content {
+            opacity: 1;
+            transform: translatey(0%);
+            visibility: visible;
+          }
+        }
       }
-    }
 
-    &:hover {
-      flex: 0 0 250px;
-      box-shadow: 1px 3px 15px var(--btn-color);
-      transform: translatey(-30px);
-    }
+      /* Top topics, buttons */
+      .btn {
+        background-color: var(--container-color);
+        color: var(--font-color);
+        border: 2px ridge var(--font-color);
+        transition: all 0.2s ease;
+      }
 
-    &:hover .content {
-      opacity: 1;
-      transform: translatey(0%);
-      visibility: visible;
-    }
-  }
-}
+      /* Top topics, buttons */
+      .btn:hover {
+        background-color: var(--container-color);
+        color: var(--font-color);
+        border: 1px ridge var(--font-color);
+      }
 
-/* Top topics, buttons */
-.btn {
-  background-color: var(--container-color);
-  color: var(--font-color);
-  border: 2px ridge var(--font-color);
-  transition: all 0.2s ease;
-}
+      /* ********** MAIN SECTION STYLE ********** */
 
-/* Top topics, buttons */
-.btn:hover {
-  background-color: var(--container-color);
-  color: var(--font-color);
-  border: 1px ridge var(--font-color);
-}
+      /* Container - GENERAL DISCUSSIONS */
+      .container-general-discussions {
+        width: 90%;
+        margin: auto;
+        padding: 0 1.5rem;
+        place-self: center;
+        font-size: 2rem;
+        font-weight: bold;
+      }
 
-/* ********** MAIN SECTION STYLE ********** */
+      /* Topic Header and Button Container WoW */
 
-/* Container - GENERAL DISCUSSIONS */
-.container-general-discussions {
-  width: 90%;
-  margin: auto;
-  padding: 0 1.5rem;
-  place-self: center;
-  font-size: 2rem;
-  font-weight: bold;
-}
+      .topic-name-and-button {
+        display: flex;
+        justify-content: space-between;
+        padding: 6.25rem 9.2rem 2rem 9.2rem;
+      }
 
-/* Topic Header and Button Container WoW */
+      .topic-header {
+        font-size: 2.3rem;
+      }
 
-.topic-name-and-button {
-  display: flex;
-  justify-content: space-between;
-  padding: 6.25rem 9.2rem 2rem 9.2rem;
-}
+      .topic-btn {
+        display: flex;
+        align-items: center;
+      }
 
-.topic-header {
-  font-size: 2.3rem;
-}
+      .new-topic-btn {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: var(--btn-color);
+        padding: .5rem 1.8rem;
+        border-radius: .3rem;
+        font-size: 1.05rem;
+        font-weight: 500;
+      }
 
-.topic-btn {
-  display: flex;
-  align-items: center;
-}
+      .new-topic-btn:hover {
+        background-color: var(--btn-border-color);
+        color: #ffffff;
+      }
 
-.new-topic-btn {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: var(--btn-color);
-  padding: .5rem 1.8rem;
-  border-radius: .3rem;
-  font-size: 1.05rem;
-  font-weight: 500;
-}
+      .new-topic-btn:active {
+        background-color: var(--btn-color);
+        color: #ffffff;
+      }
 
-.new-topic-btn:hover {
-  background-color: var(--btn-border-color);
-  color: #ffffff;
-}
+      /* Topic Header and Button Container WoW */
 
-.new-topic-btn:active {
-  background-color: var(--btn-color);
-  color: #ffffff;
-}
+      .topic-name-and-button {
+        display: flex;
+        justify-content: space-between;
+        padding: 6.25rem 9.2rem 2rem 9.2rem;
+      }
 
-/* Container Body */
-.containers-body {
-  width: 100%;
-}
+      .topic-header {
+        font-size: 2.3rem;
+      }
 
-/* Discussions container */
-.container-discussions {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-  padding: 0 1.5rem;
-  background-color: var(--container-color);
-  place-self: center;
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
+      .topic-btn {
+        display: flex;
+        align-items: center;
+      }
 
-/* Link Container */
-.link-container {
-  display: flex;
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--border-between-links);
-}
+      .new-topic-btn {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: var(--btn-color);
+        padding: .5rem 1.8rem;
+        border-radius: .3rem;
+        font-size: 1.05rem;
+        font-weight: 500;
+      }
 
-.link-container:last-of-type {
-  border-bottom: 0;
-}
+      .new-topic-btn:hover {
+        background-color: var(--btn-border-color);
+        color: #ffffff;
+      }
 
-/* Main links */
-.main-links {
-  text-decoration: none;
-  color: var(--font-color);
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 0 0.5rem;
-  transition: transform 0.2s;
-}
+      .new-topic-btn:active {
+        background-color: var(--btn-color);
+        color: #ffffff;
+      }
 
-.main-links:hover {
-  color: var(--hover-text-color);
-  transform: scale(1.1);
-}
+      /* Container Body */
+      .containers-body {
+        width: 100%;
+      }
 
-/* Topic Links Container */
-.topic-links-container {
-  padding: 2rem 0;
-  display: flex;
-  border-bottom: 1px solid var(--border-between-links);
-}
+      /* Discussions container */
+      .container-discussions {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        padding: 0 1.5rem;
+        background-color: var(--container-color);
+        place-self: center;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
 
-.topic-links-container:last-of-type {
-  border-bottom: 0;
-}
+      /* Link Container */
+      .link-container {
+        display: flex;
+        padding: 2rem 0;
+        border-bottom: 1px solid var(--border-between-links);
+      }
 
-/* Topics container - links */
-.topics-links {
-  text-decoration: none;
-  padding: 0 0.3rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--font-color);
-  transition: transform 0.2s;
-}
+      .link-container:last-of-type {
+        border-bottom: 0;
+      }
 
-/* Topics container when hovered */
-.topics-links:hover {
-  color: var(--hover-text-color);
-  transform: scale(1.1);
-}
+      /* Main links */
+      .main-links {
+        text-decoration: none;
+        color: var(--font-color);
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0 0.5rem;
+        transition: transform 0.2s;
+      }
 
-/* ********** FOOTER STYLE ********** */
+      .main-links:hover {
+        color: var(--hover-text-color);
+        transform: scale(1.1);
+      }
 
-footer {
-  background-color: var(--container-color);
-  color: var(--font-color);
-  margin-top: 100px;
-}
+      /* Topic Links Container */
+      .topic-links-container {
+        padding: 2rem 0;
+        display: flex;
+        border-bottom: 1px solid var(--border-between-links);
+      }
 
-/* Styles for links inside footer */
-footer a {
-  color: var(--font-color);
-  font-size: 14px;
-  transition-duration: 0.2s;
-}
+      .topic-links-container:last-of-type {
+        border-bottom: 0;
+      }
 
-/* Styles for hover effect on footer links */
-footer a:hover {
-  color: #fa944b;
-  text-decoration: none;
-}
+      /* Topics container - links */
+      .topics-links {
+        text-decoration: none;
+        padding: 0 0.3rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--font-color);
+        transition: transform 0.2s;
+      }
 
-/* Styles for copyright section */
-.copy {
-  font-size: 12px;
-  padding: 10px;
-  border-top: 1px solid #ffffff;
-}
+      /* Topics container when hovered */
+      .topics-links:hover {
+        color: var(--hover-text-color);
+        transform: scale(1.1);
+      }
 
-/* Styles for middle section of the footer */
-.footer-middle {
-  padding-top: 2em;
-  color: var(--font-color);
-}
+      /* ********** FOOTER STYLE ********** */
 
-/*SOCIAL ICONS*/
+      footer {
+        background-color: var(--container-color);
+        color: var(--font-color);
+        margin-top: 100px;
+      }
 
-/* Styles for social icons section */
-ul.social-network {
-  list-style: none;
-  display: inline;
-  margin-left: 0 !important;
-  padding: 0;
-}
+      /* Styles for links inside footer */
+      footer a {
+        color: var(--font-color);
+        font-size: 14px;
+        transition-duration: 0.2s;
+      }
 
-/* Styles for individual social icon */
-ul.social-network li {
-  display: inline;
-  margin: 0 5px;
-}
+      /* Styles for hover effect on footer links */
+      footer a:hover {
+        color: #fa944b;
+        text-decoration: none;
+      }
 
-/* footer social icons */
+      /* Styles for copyright section */
+      .copy {
+        font-size: 12px;
+        padding: 10px;
+        border-top: 1px solid #ffffff;
+      }
 
-/* Styles for hover effect on Facebook and Linkedin icons */
-.social-network a.icoFacebook:hover {
-  background-color: #fa944b;
-}
+      /* Styles for middle section of the footer */
+      .footer-middle {
+        padding-top: 2em;
+        color: var(--font-color);
+      }
 
-/* Styles for icon color change on hover */
-.social-network a.icoLinkedin:hover {
-  background-color: #fa944b;
-}
+      /*SOCIAL ICONS*/
 
-/* Styles for general hover effect on social icons */
-.social-network a.icoFacebook:hover i,
-.social-network a.icoLinkedin:hover i {
-  color: #fff;
-}
+      /* Styles for social icons section */
+      ul.social-network {
+        list-style: none;
+        display: inline;
+        margin-left: 0 !important;
+        padding: 0;
+      }
 
-/* Styles for icon alignment inside circular social icons */
-.social-circle li a {
-  display: inline-block;
-  position: relative;
-  margin: 0 auto 0 auto;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
-}
+      /* Styles for individual social icon */
+      ul.social-network li {
+        display: inline;
+        margin: 0 5px;
+      }
 
-/* social circular background */
-.social-network a {
-  background-color: #f9f9f9;
-}
+      /* footer social icons */
 
-/* ********** RESPONSIVENESS ********** */
+      /* Styles for hover effect on Facebook and Linkedin icons */
+      .social-network a.icoFacebook:hover {
+        background-color: #fa944b;
+      }
 
-/* For screens 660px and smaller */
-@media screen and (max-width: 660px) {
+      /* Styles for icon color change on hover */
+      .social-network a.icoLinkedin:hover {
+        background-color: #fa944b;
+      }
 
-  /* header container */
-  .container-header {
-    flex-direction: column;
-  }
+      /* Styles for general hover effect on social icons */
+      .social-network a.icoFacebook:hover i,
+      .social-network a.icoLinkedin:hover i {
+        color: #fff;
+      }
 
-  /* title */
-  .title {
-    text-align: center;
-    margin-bottom: 3%;
-    padding-left: 0%;
-  }
+      /* Styles for icon alignment inside circular social icons */
+      .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+      }
 
-  /* Base styles */
-  header {
-    display: none;
-  }
+      /* social circular background */
+      .social-network a {
+        background-color: #f9f9f9;
+      }
 
-  /* Top topics, container */
-  .container-top-topics {
-    flex-direction: column;
-    margin-top: 7rem;
-    margin-bottom: 10rem;
-  }
+      /* ********** RESPONSIVENESS ********** */
 
-  /* Images inside */
-  #content {
-    height: 100%;
-    width: 80%;
-    align-self: center;
-  }
+      /* For screens 660px and smaller */
+      @media screen and (max-width: 660px) {
 
-  /* Container Body */
-  .containers-body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
 
-  /* Search container, search button and input field */
-  .search-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+        /* header container */
+        .container-header {
+          flex-direction: column;
+        }
 
-  /* Input field - search */
-  .input-field {
-    margin-right: 0%;
-  }
+        /* title */
+        .title {
+          text-align: center;
+          margin-bottom: 3%;
+          padding-left: 0%;
+        }
 
-  /* div for names and follow links in footer section */
-  .row {
-    text-align: center;
-  }
-}
+        /* Base styles */
+        header {
+          display: none;
+        }
 
-/* for screens 501px and bigger */
-@media screen and (min-width: 501px) {
+        /* Top topics, container */
+        .container-top-topics {
+          flex-direction: column;
+          margin-top: 7rem;
+          margin-bottom: 10rem;
+        }
 
-  /* Base styles */
-  header {
-    display: block;
-  }
-}
+        /* Images inside */
+        #content {
+          height: 100%;
+          width: 80%;
+          align-self: center;
+        }
 
-/* For screens 500px and smaller */
-@media screen and (max-width: 500px) {
+        /* Container Body */
+        .containers-body {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
 
-  /* Base styles */
-  header {
-    display: block;
-    padding: 0 0.5rem;
-  }
+        /* Search container, search button and input field */
+        .search-container {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
 
-  /* Sign up and login buttons - container */
-  .button-container {
-    justify-content: center;
-    display: none;
-  }
+        /* Input field - search */
+        .input-field {
+          margin-right: 0%;
+        }
 
-  .header-nav-link {
-    display: none;
-  }
+        /* div for names and follow links in footer section */
+        .row {
+          text-align: center;
+        }
+      }
 
-  nav {
-    display: none;
-  }
+      /* for screens 501px and bigger */
+      @media screen and (min-width: 501px) {
 
-  nav ul li {
-    margin-right: 0%;
-    display: flex;
-  }
 
-  .menu-toggle {
-    display: flex;
-    justify-content: right;
-  }
+        /* Base styles */
+        header {
+          display: block;
+        }
+      }
 
-  /* Show nav links when menu is toggled */
-  header.active nav {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: left;
-  }
-}
+      /* For screens 500px and smaller */
+      @media screen and (max-width: 500px) {
+
+
+        /* Base styles */
+        header {
+          display: block;
+          padding: 0 0.5rem;
+        }
+
+        /* Sign up and login buttons - container */
+        .button-container {
+          justify-content: center;
+          display: none;
+        }
+
+        .header-nav-link {
+          display: none;
+        }
+
+        nav {
+          display: none;
+        }
+
+        nav ul li {
+          margin-right: 0%;
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: flex;
+          justify-content: right;
+        }
+
+        /* Show nav links when menu is toggled */
+        header.active nav {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: left;
+        }
+      }
