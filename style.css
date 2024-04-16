@@ -58,7 +58,6 @@
 }
 
 @keyframes jumpAnimation {
-
   0%,
   10%,
   20%,
@@ -90,7 +89,7 @@ header {
 .header-nav-link {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .navbar-ul {
@@ -134,14 +133,14 @@ nav ul li a {
 }
 
 /* Content of menu-toggle is displayed */
-.menu-toggle.active+.header-nav-link {
+.menu-toggle.active + .header-nav-link {
   display: block;
 }
 
 /* Sign up and login buttons when menu-toggle is active */
-.menu-toggle.active+.header-nav-link .sign-up-button,
-.menu-toggle.active+.header-nav-link .login-button,
-.menu-toggle.active+.header-nav-link .search-button {
+.menu-toggle.active + .header-nav-link .sign-up-button,
+.menu-toggle.active + .header-nav-link .login-button,
+.menu-toggle.active + .header-nav-link .search-button {
   font-size: 14px;
   width: 4rem;
   height: 2rem;
@@ -270,6 +269,7 @@ nav ul li a {
   max-height: 65px;
   transition: max-height 0.5s;
   overflow: hidden;
+  width: 100%;
 }
 
 input {
@@ -295,10 +295,15 @@ form p a {
   color: #3c00a0;
 }
 
+.password-requirements {
+  padding-bottom: 1rem;
+}
+
 .btn-field {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-top: 4rem;
 }
 
 .btn-field button {
@@ -365,7 +370,7 @@ form p a {
   height: 25rem;
   gap: 2rem;
 
-  >div {
+  > div {
     flex: 0 0 8rem;
     border-radius: 0.5rem;
     transition: 0.5s ease-in-out;
@@ -375,15 +380,18 @@ form p a {
     overflow: hidden;
 
     &:nth-of-type(1) {
-      background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg") no-repeat 50% / cover;
+      background: url("https://bupp.at/sites/default/files/Civilization_VI_cover_art.jpg")
+        no-repeat 50% / cover;
     }
 
     &:nth-of-type(2) {
-      background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1") no-repeat 50% / cover;
+      background: url("https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltfdc0e2810eb08204/63223137e7bdcf0dd996c9b5/WoWTokenBrown.jpg?imwidth=1088&imdensity=1")
+        no-repeat 50% / cover;
     }
 
     &:nth-of-type(3) {
-      background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp") no-repeat 50% / cover;
+      background: url("https://assetsio.gnwcdn.com/Freelancer_KeyArt_01-1024x576.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp")
+        no-repeat 50% / cover;
     }
 
     .content {
@@ -397,9 +405,11 @@ form p a {
       height: 100%;
       justify-content: flex-end;
       background: rgb(2, 2, 46);
-      background: linear-gradient(0deg,
-          rgba(2, 2, 46, 0.6755077030812324) 0%,
-          rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+        0deg,
+        rgba(2, 2, 46, 0.6755077030812324) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
       transform: translatey(100%);
       transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
       visibility: hidden;
@@ -448,7 +458,7 @@ form p a {
 
 .topic-header-container {
   text-align: center;
-  padding: 2rem 0 .6rem 0;
+  padding: 2rem 0 0.6rem 0;
 }
 
 .topic-header {
@@ -644,7 +654,6 @@ ul.social-network li {
 /* ********** RESPONSIVENESS ********** */
 
 @media screen and (max-width: 1080px) {
-
   /* Topic Name */
   .topic-name-and-button {
     display: flex;
@@ -656,7 +665,6 @@ ul.social-network li {
 
 /* For screens 660px and smaller */
 @media screen and (max-width: 660px) {
-
   /* header container */
   .container-header {
     flex-direction: column;
@@ -698,12 +706,12 @@ ul.social-network li {
   .search-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   /* Input field - search */
-  .input-field {
-    margin-right: 0%;
+  .search-input-field {
+    margin: 0%;
   }
 
   /* div for names and follow links in footer section */
@@ -714,7 +722,6 @@ ul.social-network li {
 
 /* for screens 501px and bigger */
 @media screen and (min-width: 501px) {
-
   /* Base styles */
   header {
     display: block;
@@ -723,7 +730,6 @@ ul.social-network li {
 
 /* For screens 500px and smaller */
 @media screen and (max-width: 500px) {
-
   /* Base styles */
   header {
     display: block;
@@ -761,10 +767,26 @@ ul.social-network li {
     flex-direction: column;
     align-items: left;
   }
+
+  /* Input field - search */
+  .search-input-field {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Sign up, login form box */
+  .form-box {
+    padding: 50px 15px 70px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  /* Input field - search */
+  .search-input-field {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 230px) {
-
   /* Container - GENERAL DISCUSSIONS */
   .container-general-discussions {
     padding: 0 0;

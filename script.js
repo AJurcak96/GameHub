@@ -5,7 +5,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const headerNavButtons = document.querySelectorAll(".header-nav-link button");
 
 // Select the input field
-const inputField = document.querySelector(".input-field");
+const inputField = document.querySelector(".search-input-field");
 
 // Function to handle clicks anywhere else on the document
 function handleClickOutside(event) {
@@ -59,24 +59,53 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
-// Sign up, Sign in form function
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
 let titleForm = document.getElementById("titleForm");
-let SignUpButton = document.getElementById("signUpButton");
-let SignInButton = document.getElementById("signInButton");
+let LostPassword = document.getElementById("LostPassword");
+let PasswordRequirements = document.getElementById("PasswordRequirements");
+let SignUpButton = document.getElementById("SignUpButton");
+let SignInButton = document.getElementById("SignInButton");
+
+signupBtn.onclick = function () {
+  nameField.style.display = ""; // Restore the default display property
+  LostPassword.style.display = "none";
+  PasswordRequirements.style.display = "block";
+  titleForm.innerHTML = "Sign Up";
+  signupBtn.classList.remove("disable");
+  signinBtn.classList.add("disable");
+  LostPassword.classList.add("disable");
+};
 
 signinBtn.onclick = function () {
   nameField.style.display = "none"; // Hide the nameField
+  LostPassword.style.display = "block";
+  PasswordRequirements.style.display = "none";
   titleForm.innerHTML = "Sign In";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
 };
 
-signupBtn.onclick = function () {
-  nameField.style.display = ""; // Restore the default display property
+// Update href attributes to "#" to prevent redirection
+SignUpLink.href = "/Signup-Login/Signup.html";
+SignInLink.href = "/Signup-Login/Login.html";
+
+// Add click event listeners to handle the buttons
+SignUpButton.addEventListener("click", function () {
+  nameField.style.display = "";
+  LostPassword.style.display = "";
+  PasswordRequirements.style.display = "block";
   titleForm.innerHTML = "Sign Up";
   signupBtn.classList.remove("disable");
   signinBtn.classList.add("disable");
-};
+});
+
+SignInButton.addEventListener("click", function () {
+  nameField.style.display = "none";
+  LostPassword.style.display = "block";
+  PasswordRequirements.style.display = "none";
+  titleForm.innerHTML = "Sign In";
+  signupBtn.classList.add("disable");
+  signinBtn.classList.remove("disable");
+});
