@@ -66,10 +66,10 @@
     <!-- Signup, Login form -->
     <div class="container-form">
       <div class="form-box">
-        <h2 id="titleForm">Sign Up</h2>
+        <h2 id="titleForm">Sign In</h2>
         <form>
           <div class="input-group">
-            <div class="input-field" id="nameField">
+            <div class="input-field" id="nameField" style="display: none">
               <i class="fa-solid fa-user"></i>
               <input type="text" placeholder="Name" />
             </div>
@@ -83,11 +83,22 @@
               <i class="fa-solid fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <p>Lost password <a href="#">Click Here!</a></p>
+            <p id="LostPassword">Lost password? <a href="#">Click Here!</a></p>
+            <div>
+              <p
+                id="PasswordRequirements"
+                style="display: none; text-align: center; margin-bottom: 1rem"
+              >
+                Please create a password that is 6 - 8 characters long and
+                includes a combination of letters and numbers.
+              </p>
+            </div>
           </div>
           <div class="btn-field">
-            <button type="button" id="signupBtn">Sign up</button>
-            <button type="button" id="signinBtn" class="disable">Login</button>
+            <button type="button" id="signupBtn" class="disable">
+              Sign up
+            </button>
+            <button type="button" id="signinBtn">Login</button>
           </div>
         </form>
       </div>
