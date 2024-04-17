@@ -82,7 +82,7 @@ signinBtn.onclick = function () {
   nameField.style.display = "none"; // Hide the nameField
   LostPassword.style.display = "block";
   PasswordRequirements.style.display = "none";
-  titleForm.innerHTML = "Sign In";
+  titleForm.innerHTML = "Login";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
 };
@@ -105,7 +105,7 @@ SignInButton.addEventListener("click", function () {
   nameField.style.display = "none";
   LostPassword.style.display = "block";
   PasswordRequirements.style.display = "none";
-  titleForm.innerHTML = "Sign In";
+  titleForm.innerHTML = "Login";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
 });

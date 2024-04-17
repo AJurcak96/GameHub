@@ -223,6 +223,7 @@ nav ul li a {
   width: 100%;
   height: 100%;
   padding: 10rem 0;
+  margin-bottom: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,6 +332,21 @@ form p a {
   color: #555;
 }
 
+/* Get recovery code for new password - button */
+.get-code-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Get recovery code for new password - button HOVER */
+.get-code-btn:hover {
+  background: #ffa069;
+  color: #fff;
+}
+
 /* ********** HERO STYLE ********** */
 
 /* Welcome container */
@@ -347,6 +363,12 @@ form p a {
   font-weight: 400;
   font-family: sans-serif;
   color: var(--font-color);
+}
+
+/* top 3 topic container */
+.top-topic-container {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  padding: 1rem 0;
 }
 
 /* Top topic - text */
