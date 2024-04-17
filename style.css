@@ -594,6 +594,11 @@ footer {
   margin-top: 100px;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+}
+
 /* Styles for links inside footer */
 footer a {
   color: var(--font-color);
