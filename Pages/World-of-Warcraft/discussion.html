@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup-Login</title>
+    <title>Discussion</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Amatic+SC:wght@400;700&family=Angkor&family=Anton&family=Bebas+Neue&family=IM+Fell+DW+Pica+SC&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Scribble&family=Workbench&display=swap"
       rel="stylesheet"
     />
+
     <!-- Bootstrap link-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -20,22 +22,16 @@
     />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon-icon.svg" type="image/svg" />
+    <link rel="shortcut icon" href="/favicon-icon.svg" type="image/svg" />
 
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="../style.css" />
-
-    <!-- FontAwesome link -->
-    <script
-      src="https://kit.fontawesome.com/0e5cbb8230.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <!-- Container Top -->
+    <!-- HEADER -->
     <div class="container-header">
       <!-- Title -->
-      <a class="title" href="../home-page.html">
+      <a class="title" href="/home-page.html">
         <h1 class="title">
           Game<span class="jump">H</span><span class="jump">u</span
           ><span class="jump">b</span>
@@ -48,6 +44,18 @@
         <!-- Navigation Menu -->
         <nav class="header-nav-link">
           <ul class="navbar-ul">
+            <li>
+              <a href="/Signup-Login/Signup.html" id="SignUpLink">
+                <button id="SignUpButton" class="sign-up-button">
+                  Sign up
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="/Signup-Login/Login.html" id="SignInLink">
+                <button id="SignInButton" class="login-button">Login</button>
+              </a>
+            </li>
             <li>
               <a href="#"><button class="search-button">Search</button></a>
             </li>
@@ -63,35 +71,14 @@
       </header>
     </div>
 
-    <!-- Signup, Login form -->
-    <div class="container-form">
-      <div class="form-box">
-        <h2 id="titleForm">Sign Up</h2>
-        <form>
-          <div class="input-group">
-            <div class="input-field" id="nameField">
-              <i class="fa-solid fa-user"></i>
-              <input type="text" placeholder="Name" />
-            </div>
-
-            <div class="input-field">
-              <i class="fa-solid fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-
-            <div class="input-field">
-              <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <p>Lost password <a href="#">Click Here!</a></p>
-          </div>
-          <div class="btn-field">
-            <button type="button" id="signupBtn">Sign up</button>
-            <button type="button" id="signinBtn" class="disable">Login</button>
-          </div>
-        </form>
+    <main>
+      <div class="topic-header-container">
+        <h2 class="topic-header">Test Heading</h2>
       </div>
+
+
     </div>
+    </main>
 
     <!-- Footer -->
     <footer class="mainfooter" role="contentinfo">
@@ -119,6 +106,7 @@
                     href="https://github.com/AJurcak96"
                     class="icoGithub"
                     title="Github"
+                    target="_blank"
                   >
                     <i class="gi gi-github"></i>
                     <img
@@ -132,6 +120,7 @@
                     href="https://github.com/NikolaGedovic"
                     class="icoGithub"
                     title="Github"
+                    target="_blank"
                   >
                     <i class="gi gi-github"></i>
                     <img
@@ -154,13 +143,6 @@
       </div>
     </footer>
 
-    <!-- Bootstrap js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Link to Javascript file -->
-    <script src="../script.js" type="text/javascript"></script>
+    <script src="/script.js" type="text/javascript"></script>
   </body>
 </html>
