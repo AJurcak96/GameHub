@@ -621,7 +621,7 @@ form p a {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 2rem;
+  padding: 2rem 3.5rem 2rem 2rem;
 }
 
 .heart {
@@ -869,6 +869,42 @@ ul.social-network li {
   }
 }
 
+
+@media screen and (max-width: 840px) {
+  .comment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .user-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    min-height: 200px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: .5rem;
+    box-shadow: none;
+    border-left: 1px groove grey;
+    border-top: 1px groove grey;
+    border-right: 1px groove grey;
+  }
+
+  .user-comment {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: .5rem;
+    box-shadow: none;
+    border-left: 1px groove grey;
+    border-bottom: 1px groove grey;
+    border-right: 1px groove grey;
+  }
+
+  .user-name {
+    margin-left: 2rem;
+  }
+}
+
 /* For screens 660px and smaller */
 @media screen and (max-width: 660px) {
 
@@ -993,6 +1029,22 @@ ul.social-network li {
   /* Input field - search */
   .search-input-field {
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .user-profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-name {
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .user-profile-img {
+    margin-bottom: 1.2rem;
   }
 }
 
