@@ -28,8 +28,10 @@
     <link rel="stylesheet" href="/style.css" />
 
     <!-- Link to Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- HEADER -->
@@ -99,15 +101,34 @@
               corrupti architecto debitis perferendis.
             </div>
             <div class="comment-like">
-              <div class="like-btn-before" hidden>
-                <i class='bx bx-heart' ></i>
-              </div>
-              <div class="like-btn-after">
-                <i class='bx bxs-heart' ></i>
-                <div class="likes-number">30</div>
-              </div>
+              <div class="heart"></div>
+              <div class="animation-heart"></div>
             </div>
           </div>
+        </div>
+        <div class="comment-section">
+          <div class="user-profile">
+            <div class="user-name">User Name</div>
+            <div class="user-profile-img"></div>
+          </div>
+          <div class="user-comment">
+            <div class="time-posted">Posted April 15, 2024</div>
+            <div class="comment">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+              quae, dignissimos laudantium quam reprehenderit aut ducimus rem.
+              Suscipit libero harum consequuntur doloribus quaerat, alias veniam
+              omnis aliquid, a praesentium quod! Molestias quod soluta rem
+              voluptatem assumenda? Praesentium, delectus corrupti, odit
+              doloremque consectetur possimus repellendus porro veritatis ipsum
+              voluptate cumque, repellat sed? Dolore, nobis mollitia? Error ex
+              corrupti architecto debitis perferendis.
+            </div>
+            <div class="comment-like">
+              <div class="heart"></div>
+              <div class="animation-heart"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -174,6 +195,7 @@
       </div>
     </footer>
 
-    <script src="/script.js" type="text/javascript"></script>
+    <script src="/script.js"></script>
+    <script src="/like-button-script.js"></script>
   </body>
 </html>
