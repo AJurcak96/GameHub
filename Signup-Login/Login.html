@@ -66,12 +66,16 @@
     <!-- Signup, Login form -->
     <div class="container-form">
       <div class="form-box">
+        <div class="btn-field">
+          <button type="button" id="signupBtn" class="disable">Sign up</button>
+          <button type="button" id="signinBtn">Login</button>
+        </div>
         <h2 id="titleForm">Login</h2>
         <form>
           <div class="input-group">
             <div class="input-field" id="nameField" style="display: none">
               <i class="fa-solid fa-user"></i>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Username" />
             </div>
 
             <div class="input-field">
@@ -87,21 +91,36 @@
               Lost password?
               <a href="/Signup-Login/Lost-Password.html">Click Here!</a>
             </p>
-            <div>
-              <p
-                id="PasswordRequirements"
-                style="display: none; text-align: center; margin-bottom: 1rem"
-              >
-                Please create a password that is 6 - 8 characters long and
-                includes a combination of letters and numbers.
-              </p>
-            </div>
           </div>
-          <div class="btn-field">
-            <button type="button" id="signupBtn" class="disable">
-              Sign up
+          <div>
+            <p
+              id="PasswordRequirements"
+              style="display: none; text-align: center; margin-bottom: 1rem"
+            >
+              Please create a password that is 6 - 8 characters long and
+              includes a combination of letters and numbers.
+            </p>
+          </div>
+          <div
+            class="btn-field"
+            style="margin-top: 3rem; display: flex; justify-content: center"
+          >
+            <button
+              type="button"
+              id="registerButton"
+              class="register-btn"
+              style="display: none; border-radius: 20px""
+            >
+              Register
             </button>
-            <button type="button" id="signinBtn">Login</button>
+            <button
+              type="button"
+              id="loginButton"
+              class="login-btn"
+              style="border-radius: 20px"
+            >
+              login
+            </button>
           </div>
         </form>
       </div>

@@ -66,39 +66,68 @@
     <!-- Signup, Login form -->
     <div class="container-form">
       <div class="form-box">
+        <div class="btn-field">
+          <button type="button" id="signupBtn">Sign up</button>
+          <button type="button" id="signinBtn" class="disable">Login</button>
+        </div>
         <h2 id="titleForm">Sign Up</h2>
-        <form>
+        <form id="signupForm">
+          <!-- Add id to the form for easier targeting -->
           <div class="input-group">
             <div class="input-field" id="nameField">
               <i class="fa-solid fa-user"></i>
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Username" id="nameInput" />
+              <!-- Add id to the input for easier targeting -->
             </div>
 
             <div class="input-field">
               <i class="fa-solid fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" placeholder="Email" id="emailInput" />
+              <!-- Add id to the input for easier targeting -->
             </div>
             <div class="input-field">
               <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                placeholder="Password"
+                id="passwordInput"
+              />
+              <!-- Add id to the input for easier targeting -->
             </div>
             <p id="LostPassword" style="display: none">
               Lost password?
               <a href="/Signup-Login/Lost-Password.html">Click Here!</a>
             </p>
-            <div>
-              <p
-                id="PasswordRequirements"
-                style="display: block; text-align: center"
-              >
-                Please create a password that is 6 - 8 characters long and
-                includes a combination of letters and numbers.
-              </p>
-            </div>
           </div>
-          <div class="btn-field">
-            <button type="button" id="signupBtn">Sign up</button>
-            <button type="button" id="signinBtn" class="disable">Login</button>
+          <div>
+            <p
+              id="PasswordRequirements"
+              style="display: block; text-align: center"
+            >
+              Please create a password that is 6 - 8 characters long and
+              includes a combination of letters and numbers.
+            </p>
+          </div>
+          <div
+            class="btn-field"
+            style="margin-top: 3rem; display: flex; justify-content: center"
+          >
+            <button
+              type="button"
+              id="registerButton"
+              class="register-btn"
+              style="border-radius: 20px"
+            >
+              Register
+            </button>
+            <button
+              type="button"
+              id="loginButton"
+              class="login-btn"
+              style="display: none; border-radius: 20px"
+            >
+              login
+            </button>
           </div>
         </form>
       </div>
