@@ -233,9 +233,10 @@ nav ul li a {
 /* Sign up, login form box */
 .form-box {
   width: 90%;
+  height: 100%;
   max-width: 450px;
   background: var(--container-color);
-  padding: 50px 60px 70px;
+  padding: 2rem 2rem 2rem;
   text-align: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
@@ -305,7 +306,6 @@ form p a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 4rem;
 }
 
 .btn-field button {
@@ -313,12 +313,12 @@ form p a {
   background: var(--btn-color);
   color: #fff;
   height: 40px;
-  border-radius: 20px;
+  border-radius: 0.3rem;
   border: 0;
   outline: 0;
   cursor: pointer;
   transition: background 1s;
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 .input-group {
@@ -333,8 +333,11 @@ form p a {
   color: #555;
 }
 
-/* Get recovery code for new password - button */
-.get-code-btn {
+/* Get recovery code for new password - button, register button */
+.get-link-btn,
+.register-btn,
+.login-btn,
+.confirm-btn {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -343,9 +346,21 @@ form p a {
 }
 
 /* Get recovery code for new password - button HOVER */
-.get-code-btn:hover {
-  background: #ffa069;
-  color: #fff;
+.get-link-btn:hover,
+.register-btn:hover,
+.login-btn:hover,
+.confirm-btn:hover {
+  background-color: var(--btn-border-color);
+  color: #ffffff;
+}
+
+/* Get recovery code for new password - button ACTIVE */
+.get-link-btn:active,
+.register-btn:active,
+.login-btn:active,
+.confirm-btn:active {
+  background-color: var(--btn-color);
+  color: #ffffff;
 }
 
 /* ********** SEARCH RESULTS ********** */
@@ -797,6 +812,10 @@ ul.social-network li {
     margin: 0%;
   }
 
+  .input-field {
+    margin: 0%;
+  }
+
   /* div for names and follow links in footer section */
   .row {
     text-align: center;
@@ -858,7 +877,7 @@ ul.social-network li {
 
   /* Sign up, login form box */
   .form-box {
-    padding: 50px 15px 70px;
+    padding: 2rem 0.5rem 2rem;
   }
 }
 

@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
+// --- Register Form animations --- //
+
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
@@ -67,11 +69,15 @@ let LostPassword = document.getElementById("LostPassword");
 let PasswordRequirements = document.getElementById("PasswordRequirements");
 let SignUpButton = document.getElementById("SignUpButton");
 let SignInButton = document.getElementById("SignInButton");
+let registerButton = document.getElementById("registerButton");
+let loginButton = document.getElementById("loginButton");
 
 signupBtn.onclick = function () {
   nameField.style.display = ""; // Restore the default display property
   LostPassword.style.display = "none";
   PasswordRequirements.style.display = "block";
+  registerButton.style.display = "block";
+  loginButton.style.display = "none";
   titleForm.innerHTML = "Sign Up";
   signupBtn.classList.remove("disable");
   signinBtn.classList.add("disable");
@@ -82,6 +88,8 @@ signinBtn.onclick = function () {
   nameField.style.display = "none"; // Hide the nameField
   LostPassword.style.display = "block";
   PasswordRequirements.style.display = "none";
+  registerButton.style.display = "none";
+  loginButton.style.display = "block";
   titleForm.innerHTML = "Login";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
@@ -108,4 +116,80 @@ SignInButton.addEventListener("click", function () {
   titleForm.innerHTML = "Login";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
+});
+
+// --- Signup Form --- //
+
+// Add an event listener to the register button
+document
+  .getElementById("registerButton")
+  .addEventListener("click", async () => {
+    // Get input values from the form
+    const username = document.getElementById("nameInput").value;
+    const email = document.getElementById("emailInput").value;
+    const password = document.getElementById("passwordInput").value;
+
+    // Create a user object with the input values
+    const userData = {
+      username: username,
+      email: email,
+      password: password,
+    };
+
+    try {
+      // Send a POST request to your backend endpoint for registration
+      const response = await fetch("/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+
+      // Check if the registration was successful
+      if (response.ok) {
+        alert("Registration successful!");
+      } else {
+        alert("Registration failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error registering user:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  });
+
+// --- Login Form --- //
+
+// Add an event listener to the login button
+document.getElementById("loginButton").addEventListener("click", async () => {
+  // Get input values from the form
+  const email = document.querySelector("#emailInput").value;
+  const password = document.querySelector("#passwordInput").value;
+
+  // Create a user object with the input values
+  const userData = {
+    email: email,
+    password: password,
+  };
+
+  try {
+    // Send a POST request to your backend endpoint for login
+    const response = await fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+
+    // Check if the login was successful
+    if (response.ok) {
+      alert("Login successful!");
+    } else {
+      alert("Login failed. Please check your email and password.");
+    }
+  } catch (error) {
+    console.error("Error logging in:", error);
+    alert("An error occurred. Please try again later.");
+  }
 });
