@@ -193,4 +193,3 @@ document.getElementById("loginButton").addEventListener("click", async () => {
     alert("An error occurred. Please try again later.");
   }
 });
->>>>>>>>> Temporary merge branch 2
