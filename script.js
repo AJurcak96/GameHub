@@ -116,9 +116,6 @@ SignInButton.addEventListener("click", function () {
   titleForm.innerHTML = "Login";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
-<<<<<<<<< Temporary merge branch 1
-});
-=========
 });
 
 // --- Signup Form --- //
