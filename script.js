@@ -116,9 +116,9 @@ SignInButton.addEventListener("click", function () {
   titleForm.innerHTML = "Login";
   signupBtn.classList.add("disable");
   signinBtn.classList.remove("disable");
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
 });
-=======
+=========
 });
 
 // --- Signup Form --- //
@@ -196,4 +196,4 @@ document.getElementById("loginButton").addEventListener("click", async () => {
     alert("An error occurred. Please try again later.");
   }
 });
->>>>>>> be762c547d8040e5b199565ed856da6c33605f0c
+>>>>>>>>> Temporary merge branch 2
