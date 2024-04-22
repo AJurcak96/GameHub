@@ -34,6 +34,155 @@
     />
   </head>
   <body>
-    <h1>new topic</h1>
+    <!-- HEADER -->
+    <div class="container-header">
+      <!-- Title -->
+      <a class="title" href="/home-page.html">
+        <h1 class="title">
+          Game<span class="jump">H</span><span class="jump">u</span
+          ><span class="jump">b</span>
+        </h1>
+      </a>
+      <header>
+        <!-- Hamburger Menu Icon -->
+        <span class="menu-toggle">&#9776;</span>
+
+        <!-- Navigation Menu -->
+        <nav class="header-nav-link">
+          <ul class="navbar-ul">
+            <li>
+              <a href="/Signup-Login/Signup.html" id="SignUpLink">
+                <button id="SignUpButton" class="sign-up-button">
+                  Sign up
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="/Signup-Login/Login.html" id="SignInLink">
+                <button id="SignInButton" class="login-button">Login</button>
+              </a>
+            </li>
+            <li>
+              <a href="#"><button class="search-button">Search</button></a>
+            </li>
+            <li>
+              <input
+                class="search-input-field"
+                type="text"
+                placeholder="Search a for game..."
+              />
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <div class="new-topic-form-container">
+        <form action="#">
+          <div class="new-topic-form-h2">Topic Details</div>
+          <div class="new-topic-form-title-input">
+            <label class="new-topic-title-label" for="new-topic-title"
+              >Title</label
+            >
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="new-topic-title"
+              required
+              placeholder="Title"
+            />
+          </div>
+          <div class="new-topic-game">
+            <label class="new-topic-game-title" for="game">Game</label>
+            <select name="games" class="game-options" id="game">
+              <option value="wow">Wow</option>
+              <option value="fifa">Fifa</option>
+              <option value="hitman">Hitman</option>
+              <option value="need-for-speed">Need For Speed</option>
+              <option value="nba">NBA</option>
+            </select>
+          </div>
+          <div class="new-topic-text">
+            <textarea
+              class="new-topic-textarea"
+              name="new-topic-text"
+              id="new-topic-text"
+              placeholder="What's on your mind?"
+            ></textarea>
+          </div>
+          <div class="submit-topic">
+            <a href="#" class="submit-topic-btn">Submit Topic</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mainfooter" role="contentinfo">
+      <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Aleksandar Jurcak</h4>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Nikola Gedovic</h4>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-6"></div>
+            <div class="col-md-3">
+              <h4>Follow Us</h4>
+              <ul class="social-network social-circle">
+                <li>
+                  <a
+                    href="https://github.com/AJurcak96"
+                    class="icoGithub"
+                    title="Github"
+                    target="_blank"
+                  >
+                    <i class="gi gi-github"></i>
+                    <img
+                      src="https://avatars.githubusercontent.com/u/150478688?s=400&u=d9fa13af8a938009523b2185205326fbfa548714&v=4"
+                      style="width: 30px; height: 30px; border-radius: 50%"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/NikolaGedovic"
+                    class="icoGithub"
+                    title="Github"
+                    target="_blank"
+                  >
+                    <i class="gi gi-github"></i>
+                    <img
+                      src="https://avatars.githubusercontent.com/u/113900452?v=4"
+                      style="width: 30px; height: 30px; border-radius: 50%"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 copy">
+              <p class="text-center">
+                &copy; Copyright 2024 - GameHub. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
   </body>
 </html>
