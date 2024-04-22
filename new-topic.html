@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>World of Warcraft</title>
+    <title>Add New Topic</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +26,13 @@
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="/style.css" />
-  </head>
 
+    <!-- Link to Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <!-- HEADER -->
     <div class="container-header">
@@ -72,86 +77,46 @@
       </header>
     </div>
 
+    <!-- Main Content -->
     <main>
-      <div class="topic-name-and-button">
-        <div class="topic-header-container">
-          <h2 class="topic-header">World of Warcraft</h2>
-        </div>
-        <div class="topic-btn">
-          <a class="new-topic-btn" href="/new-topic.html">Start New Topic</a>
-        </div>
-      </div>
-      <div class="containers-body">
-        <!-- Container Topics -->
-        <div class="container-discussions">
-          <!-- Links to discussions -->
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/vanilla-wow.html"
-              >Vanilla WoW</a
+      <div class="new-topic-form-container">
+        <form action="#">
+          <div class="new-topic-form-h2">Topic Details</div>
+          <div class="new-topic-form-title-input">
+            <label class="new-topic-title-label" for="new-topic-title"
+              >Title</label
             >
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="new-topic-title"
+              required
+              placeholder="Title"
+            />
           </div>
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/the-burning-crusade.html"
-              >The Burning Crusade (2007)</a
-            >
+          <div class="new-topic-game">
+            <label class="new-topic-game-title" for="game">Game</label>
+            <select name="games" class="game-options" id="game">
+              <option value="wow">Wow</option>
+              <option value="fifa">Fifa</option>
+              <option value="hitman">Hitman</option>
+              <option value="need-for-speed">Need For Speed</option>
+              <option value="nba">NBA</option>
+            </select>
           </div>
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/wrath-of-the-lich-king.html"
-              >Wrath Of The Lich King (2008)</a
-            >
+          <div class="new-topic-text">
+            <textarea
+              class="new-topic-textarea"
+              name="new-topic-text"
+              id="new-topic-text"
+              placeholder="What's on your mind?"
+            ></textarea>
           </div>
-          <div class="link-container">
-            <a class="main-links" href="/Pages/World-of-Warcraft/cataclysm.html"
-              >Cataclysm (2010)</a
-            >
+          <div class="submit-topic">
+            <a href="#" class="submit-topic-btn">Submit Topic</a>
           </div>
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/mists-of-pandaria.html"
-              >Mists Of Pandaria (2012)</a
-            >
-          </div>
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/warlords-of-draenor.html"
-              >Warlords Of Draenor (2014)</a
-            >
-          </div>
-          <div class="link-container">
-            <a class="main-links" href="/Pages/World-of-Warcraft/legion.html"
-              >Legion (2016)</a
-            >
-          </div>
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/battle-for-azeroth.html"
-              >Battle For Azeroth (2018)</a
-            >
-          </div>
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/shadowlands.html"
-              >Shadowlands (2020)</a
-            >
-          </div>
-          <div class="link-container">
-            <a
-              class="main-links"
-              href="/Pages/World-of-Warcraft/dragonflight.html"
-              >Dragonflight (2022)</a
-            >
-          </div>
-        </div>
+        </form>
       </div>
     </main>
 
@@ -218,6 +183,6 @@
       </div>
     </footer>
 
-    <script src="/script.js" type="text/javascript"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
