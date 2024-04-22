@@ -533,6 +533,9 @@ form p a {
 }
 
 .new-topic-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: #ffffff;
   background-color: var(--btn-color);
