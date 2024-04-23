@@ -1060,6 +1060,18 @@ ul.social-network li {
   .row {
     text-align: center;
   }
+
+  .new-topic-form-container {
+    justify-content: center;
+  }
+
+  .new-topic-title {
+    max-width: 210px;
+  }
+
+  .new-topic-text>textarea {
+    max-width: 210px;
+  }
 }
 
 /* for screens 501px and bigger */
